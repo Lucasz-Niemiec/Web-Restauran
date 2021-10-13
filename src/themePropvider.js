@@ -16,8 +16,12 @@ const theme = {
   fonts_color_ligth: "#fff",
 
   //fonts
-  title_h1: "2rem",
-  normal_text: "1rem",
+  font_large: "2rem",
+  font_medium: "1.5rem",
+  font_small: "1.5rem",
+
+  //animation
+  ease_in_out: "ease-in-out 0.2s",
 };
 
 const Theme = ({ children }) => (

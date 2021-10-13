@@ -7,6 +7,7 @@ export const Wrapper = styled.article`
   margin-left: 1rem;
   max-width: 25rem;
   width: auto;
+  margin-top: 3rem;
 
   h1 {
     color: ${({ theme }) => theme.prymary};

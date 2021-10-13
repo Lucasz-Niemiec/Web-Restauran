@@ -42,6 +42,7 @@ export const Text = styled.p`
   h1 {
     color: ${({ theme }) => theme.prymary};
     font-size: ${({ theme }) => theme.title_h1};
+    font-family: ${({ theme }) => theme.fonts_title};
     margin-bottom: 1rem;
   }
 `;

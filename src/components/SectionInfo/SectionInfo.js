@@ -20,7 +20,7 @@ const SectionInfo = () => (
 
       <span></span>
       <Text>
-        <h1>algo aglo restaurante </h1>
+        <h1>Algo Aglo Restaurante </h1>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est
         delectus placeat atque repudiandae dolore, consequuntur quos dolor vitae
         illo corrupti velit facere eligendi, voluptate aspernatur debitis ipsam

@@ -5,6 +5,7 @@
 //components
 import SectionOne from "../SectionOne/SectionOne";
 import SectionInfo from "../SectionInfo/SectionInfo";
+import SectionMenu from "../SectionMenu/SectionMenu";
 
 //
 function Home() {
@@ -13,6 +14,8 @@ function Home() {
       <SectionOne />
 
       <SectionInfo />
+
+      <SectionMenu />
     </>
   );
 }

@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   background: ${({ theme }) => theme.secondary_2};
-  width: 100vw;
   height: auto;
   min-height: 100%;
+  width: 100vw;
   padding: 1rem;
 `;
 export const FlexContainer = styled.div`
@@ -12,8 +12,9 @@ export const FlexContainer = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  padding: 10px 0;
   flex-wrap: wrap;
+  padding: 10px 0;
   width: 100%;
   height: 100%;
+  margin-bottom: 1rem;
 `;
