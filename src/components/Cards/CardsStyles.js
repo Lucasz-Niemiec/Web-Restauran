@@ -1,4 +1,38 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+  :focus {
+    outline: none;
+
+    div {
+      transform: translate(-50px, 0px);
+      transition: 0.4s ease-in-out;
+      border-right: solid 4px ${({ theme }) => theme.prymary};
+      ::after {
+        top: 0%;
+        left: 0;
+        opacity: 0.9;
+        transition: 0.4s ease-in-out;
+      }
+      h1 {
+        color: ${({ theme }) => theme.fonts_color_ligth};
+        opacity: 1;
+        margin: 0%;
+        z-index: 1;
+        font-size: 1.5rem;
+        transition: 0.4s ease-in-out;
+      }
+      img {
+        max-width: 120%;
+        height: auto;
+        object-fit: cover;
+        transition: 0.4s ease-in-out;
+      }
+    }
+  }
+`;
 
 export const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.prymary} /* */;
@@ -15,6 +49,16 @@ export const Wrapper = styled.div`
   align-items: center;
 
   z-index: 1;
+  ::after {
+    content: "";
+    position: absolute;
+    background: ${({ theme }) => theme.secondary_1};
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+  }
 
   h1 {
     opacity: 0;
@@ -28,24 +72,11 @@ export const Wrapper = styled.div`
     height: auto;
     object-fit: cover;
   }
-  &:hover {
+
+  :hover {
     transform: translate(-50px, 0px);
     transition: 0.4s ease-in-out;
     border-right: solid 4px ${({ theme }) => theme.prymary};
-  }
-
-  ::after {
-    content: "";
-    position: absolute;
-    background: ${({ theme }) => theme.secondary_1};
-    width: 100%;
-    height: 100%;
-    top: 100%;
-    left: 0;
-    opacity: 0;
-  }
-
-  :hover {
     ::after {
       top: 0%;
       left: 0;

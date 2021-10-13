@@ -18,8 +18,9 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/" element={<Menu />} />
-          <Route path="/:id" element={<FoodInfo />} />
+          <Route path="/Menu" element={<Menu />} />
+          <Route path="/Menu/:id" element={<FoodInfo />} />
+          <Route path=":id" element={<FoodInfo />} />
         </Routes>
         <GlobalStyle />
       </Router>

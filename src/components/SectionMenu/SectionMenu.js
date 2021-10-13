@@ -7,9 +7,9 @@ import {
   Wrapper,
   Text,
   Content,
-  Button,
   ButtonImage,
   BeforeImage,
+  StyleLink,
 } from "./SectionMenu.styled";
 ///
 
@@ -24,9 +24,9 @@ const SectionMenu = () => {
           impedit necessitatibus tempore doloribus tempora quo neque nulla
           incidunt beatae, voluptate, temporibus sed cum!
         </Text>
-        <Button>Menu</Button>
+        <StyleLink to="/Menu">Menu</StyleLink>
         <BeforeImage>
-          <ButtonImage></ButtonImage>
+          <ButtonImage to="/Menu"></ButtonImage>
         </BeforeImage>
       </Content>
     </Wrapper>

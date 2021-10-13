@@ -2,12 +2,17 @@
 import { useContext } from "react";
 import { myContext } from "../Context/context";
 //styles
+import { Wrapper, Content } from "./Menu.styles";
 //compnents
 
 const Menu = () => {
   const { dataMapping } = useContext(myContext);
 
-  return <div>{dataMapping.mapMenu}</div>;
+  return (
+    <Wrapper>
+      <Content>{dataMapping.mapMenu} </Content>
+    </Wrapper>
+  );
 };
 
 export default Menu;

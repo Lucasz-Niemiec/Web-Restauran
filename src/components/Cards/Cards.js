@@ -1,9 +1,9 @@
 //Uses
 import { useState } from "react";
 //styled
-import { Wrapper, Slide } from "./CardsStyles";
+import { Wrapper, Slide, StyledLink } from "./CardsStyles";
 //router
-import { Link } from "react-router-dom";
+
 //
 const Cards = ({ id, img, title, description }) => {
   const [isMouseOver, seIsMouseOver] = useState(false);
@@ -16,7 +16,11 @@ const Cards = ({ id, img, title, description }) => {
 
   return (
     <>
-      <Link to={id}>
+      <StyledLink
+        to={id}
+        onFocus={() => ClassChangeHandler()}
+        onBlur={() => mouseOutHandler()}
+      >
         <Wrapper
           onMouseEnter={() => ClassChangeHandler()}
           onMouseLeave={() => mouseOutHandler()}
@@ -25,7 +29,7 @@ const Cards = ({ id, img, title, description }) => {
 
           <img src={img} alt={title} />
         </Wrapper>
-      </Link>
+      </StyledLink>
       {isMouseOver && (
         <Slide>
           <span className="slide">

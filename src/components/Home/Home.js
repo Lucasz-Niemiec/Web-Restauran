@@ -7,6 +7,8 @@ import SectionOne from "../SectionOne/SectionOne";
 import SectionInfo from "../SectionInfo/SectionInfo";
 import SectionMenu from "../SectionMenu/SectionMenu";
 import SectionConatct from "../SectionContact/SectionConatct";
+import Footer from "../Footer/Footer";
+
 //
 function Home() {
   return (
@@ -18,6 +20,8 @@ function Home() {
       <SectionMenu />
 
       <SectionConatct />
+
+      <Footer />
     </>
   );
 }
