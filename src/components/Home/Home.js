@@ -6,7 +6,7 @@
 import SectionOne from "../SectionOne/SectionOne";
 import SectionInfo from "../SectionInfo/SectionInfo";
 import SectionMenu from "../SectionMenu/SectionMenu";
-
+import SectionConatct from "../SectionContact/SectionConatct";
 //
 function Home() {
   return (
@@ -16,6 +16,8 @@ function Home() {
       <SectionInfo />
 
       <SectionMenu />
+
+      <SectionConatct />
     </>
   );
 }
