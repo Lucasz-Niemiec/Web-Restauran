@@ -1,5 +1,4 @@
 ///USes
-import { useNavigate } from "react-router-dom";
 
 import { useState } from "react";
 ///components
@@ -10,8 +9,6 @@ import { Wrapper, Button, Nav, NavContainer } from "./NavbarMenu.styled";
 ///
 
 const NavbarMenu = () => {
-  const navigate = useNavigate();
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const OpenMenu = () => {
@@ -39,7 +36,7 @@ const NavbarMenu = () => {
                 path="#SectionWelcome"
                 open={() => OpenMenu()}
               />
-              {console.log(navigate)}
+
               <NavLinks
                 title="About Us"
                 path="#SectionInfo"
