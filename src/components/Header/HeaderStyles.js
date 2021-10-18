@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import plate1 from "../../images/plate1.jpg";
+import plate1 from "../../images/header1.jpg";
 
 export const Wrapper = styled.div`
   background: url(${plate1}) center top no-repeat;

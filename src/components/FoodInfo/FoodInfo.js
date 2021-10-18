@@ -1,5 +1,6 @@
 //components
-
+import BreadCrumb from "../BreadCrumb/BreadCrumb";
+import GoToTop from "../GoToTop";
 //uses
 import { useParams } from "react-router-dom";
 import { myContext } from "../Context/context";
@@ -15,10 +16,12 @@ const FoodInfo = () => {
   const mappedArray = categories.filter(
     (category) => category.idCategory === id
   );
-  console.log(mappedArray);
+  const cardTitle = mappedArray.map((el) => el.strCategory);
 
   return (
     <>
+      {<BreadCrumb title={cardTitle} />}
+
       <Wrapper>
         {mappedArray.map((el) => (
           <Content key={mappedArray["0"].idCategory}>
@@ -32,6 +35,7 @@ const FoodInfo = () => {
           </Content>
         ))}
       </Wrapper>
+      <GoToTop />
     </>
   );
 };

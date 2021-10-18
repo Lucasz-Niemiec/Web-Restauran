@@ -18,7 +18,7 @@ const Footer = () => {
           <i className="fab fa-twitter-square"></i>
         </a>
       </Content>
-      <p>Meals 2021 &copy;</p>
+      <p>Restaurant 2021 &copy;</p>
     </Wrapper>
   );
 };

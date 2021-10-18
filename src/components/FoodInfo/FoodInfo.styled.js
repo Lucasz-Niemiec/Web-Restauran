@@ -5,9 +5,9 @@ export const Wrapper = styled.div`
   height: auto;
   min-height: 100%;
   padding: 10rem 2rem;
-  border-top: solid 5rem;
+
   border-bottom: solid 5rem;
-  border-color: ${({ theme }) => theme.secondary_2_variation};
+  border-color: ${({ theme }) => theme.secondary_1};
 `;
 export const Content = styled.div`
   display: flex;

@@ -4,6 +4,8 @@ import { myContext } from "../Context/context";
 //styles
 import { Wrapper, Content } from "./Menu.styles";
 //compnents
+import GotoTop from "../GoToTop";
+//
 
 const Menu = () => {
   const { dataMapping } = useContext(myContext);
@@ -11,6 +13,7 @@ const Menu = () => {
   return (
     <Wrapper>
       <Content>{dataMapping.mapMenu} </Content>
+      <GotoTop />
     </Wrapper>
   );
 };
