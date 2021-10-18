@@ -12,7 +12,7 @@ import KitchenImage from "../../images/kitchen-731351_1280.jpg";
 //
 
 const SectionInfo = () => (
-  <Wrapper>
+  <Wrapper id="SectionInfo">
     <Content>
       <ImgContainer>
         <Img src={KitchenImage} alt="kitchen " />

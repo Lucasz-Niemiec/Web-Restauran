@@ -2,20 +2,20 @@
 import { useContext } from "react";
 import { myContext } from "../Context/context";
 //styles
-import { Wrapper, FlexContainer } from "./SectionOneStyles";
+import { Wrapper, FlexContainer } from "./SectionWelcome.Styles";
 //components
 import InfoCard from "../InfoCard/InfoCard";
 
 //
-function SectionOne() {
+function SectionWelcome() {
   const { dataMapping } = useContext(myContext);
 
   return (
-    <Wrapper>
+    <Wrapper id="SectionWelcome">
       <InfoCard />
       <FlexContainer>{dataMapping.mapSectionOne}</FlexContainer>
     </Wrapper>
   );
 }
 
-export default SectionOne;
+export default SectionWelcome;

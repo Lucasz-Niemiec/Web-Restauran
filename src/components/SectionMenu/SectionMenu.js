@@ -15,7 +15,7 @@ import {
 
 const SectionMenu = () => {
   return (
-    <Wrapper>
+    <Wrapper id="SectionMenu">
       <Content>
         <Text>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed labore

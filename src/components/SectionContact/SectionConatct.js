@@ -9,7 +9,7 @@ import location_2 from "../../images/toa-heftiba-TwtUYtDOv6w-unsplash.jpg";
 import location_1 from "../../images/mathew-schwartz-GjzJFMnJZYg-unsplash.jpg";
 const SectionConatct = () => {
   return (
-    <Wrapper>
+    <Wrapper id="SectionConatct">
       <Content>
         <h1>Contact</h1>
         <TextInfo>
