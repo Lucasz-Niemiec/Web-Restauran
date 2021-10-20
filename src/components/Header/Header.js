@@ -7,7 +7,7 @@ import { Wrapper, Logo } from "./HeaderStyles";
 
 const Header = () => {
   return (
-    <Wrapper>
+    <Wrapper id="header">
       <Logo />
       <GotoTop />
     </Wrapper>
