@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
+import { Silde, slideDown } from "../../themePropvider";
+///
 export const CArdConatiner = styled.div`
-  background-color: red;
   position: relative;
   width: 100%;
   height: 50%;
@@ -10,14 +10,40 @@ export const CArdConatiner = styled.div`
   flex-direction: row;
   align-items: center;
 `;
-///\\\\\
+///\\\
 export const StyledLink = styled(Link)`
   text-decoration: none;
   outline: none;
   width: 90%;
+  z-index: 1;
+
+  h1 {
+    opacity: 0;
+  }
+
+  &:focus {
+    transform: translateX(-18%);
+    transition: 0.6s ease-in-out;
+    h1 {
+      color: ${({ theme }) => theme.fonts_color_ligth};
+      opacity: 1;
+      z-index: 1;
+      font-size: 1.5rem;
+      transition: 0.4s ease-in-out;
+    }
+    @media screen and (max-width: 500px) {
+      &:focus {
+        transform: translateX(-14%);
+      }
+    }
+    @media screen and (max-width: 400px) {
+      font-size: 0.6rem;
+      padding: 10px 10px 10px 2rem;
+    }
+  }
 `;
 
-///\\\\\
+///\\\
 export const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.prymary};
   width: 50%;
@@ -32,6 +58,8 @@ export const Wrapper = styled.div`
   align-items: center;
   position: relative;
   z-index: 1;
+  transform: translateX(50%);
+
   ::after {
     content: "";
     position: absolute;
@@ -45,8 +73,6 @@ export const Wrapper = styled.div`
 
   h1 {
     opacity: 0;
-    margin: 0%;
-    font-size: 0;
   }
 
   img {
@@ -57,7 +83,8 @@ export const Wrapper = styled.div`
   }
 
   :hover {
-    transition: 0.4s ease-in-out;
+    transform: translateX(5rem);
+    transition: 0.6s ease-in-out;
     border-right: solid 4px ${({ theme }) => theme.prymary};
     ::after {
       top: 0%;
@@ -68,7 +95,6 @@ export const Wrapper = styled.div`
     h1 {
       color: ${({ theme }) => theme.fonts_color_ligth};
       opacity: 1;
-      margin: 0%;
       z-index: 1;
       font-size: 1.5rem;
       transition: 0.4s ease-in-out;
@@ -80,31 +106,49 @@ export const Wrapper = styled.div`
       transition: 0.4s ease-in-out;
     }
   }
+  @media screen and (min-width: 1400px) {
+    background-color: ${({ theme }) => theme.prymary};
+    width: 90%;
+    height: 100%;
+    transform: translateX(0%);
+    :hover {
+      transform: translateY(-1rem);
+    }
+    @media screen and (max-width: 400px) {
+      :hover {
+        transform: translateX(-1px);
+      }
+    }
+  }
 `;
-
+///\\\
 export const Slide = styled.div`
+  top: 5%;
+  left: 20%;
   &.slide {
     visibility: visible;
     position: absolute;
-    top: 5%;
-    left: 45%;
     background: ${({ theme }) => theme.secondary_1};
     width: 50%;
     height: 90%;
-    padding: 10px 10px 0 15px;
-    opacity: 0.9;
-
+    padding: 10px 10px 10px 6rem;
+    animation-name: ${Silde};
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
     overflow: hidden;
     color: ${({ theme }) => theme.fonts_color_ligth};
-    animation-duration: 0.5s;
 
-    .text-slide {
-      font-size: 1rem;
-      margin-left: 50px;
-      margin-right: 5px;
-      text-align: left;
-      color: #fff;
-      opacity: 0.9;
+    @media screen and (min-width: 1400px) {
+      animation-name: ${slideDown};
+      animation-fill-mode: forwards;
+      animation-duration: 0.6s;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 0.6rem;
+    }
+    @media screen and (max-width: 400px) {
+      font-size: 0.6rem;
+      padding: 10px 10px 10px 2rem;
     }
   }
 `;

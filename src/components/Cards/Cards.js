@@ -28,16 +28,13 @@ const Cards = ({ id, img, title, description }) => {
           >
             <h1>{title}</h1>
             <img src={img} alt={title} />
-          </Wrapper>
-          <Slide className="slide"></Slide>
-          {/*  {isMouseOver && (
-            <Slide>
-              <span className="slide">
-                <article className="text-slide">{description}</article>
-              </span>
-            </Slide>
-          )} */}{" "}
+          </Wrapper>{" "}
         </StyledLink>
+        {isMouseOver && (
+          <Slide className="slide">
+            <p>{description}</p>
+          </Slide>
+        )}
       </CArdConatiner>
     </>
   );

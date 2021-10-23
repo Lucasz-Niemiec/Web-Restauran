@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   width: 100%;
   padding: 1rem;
   position: relative;
-  @media screen and (min-width: 1500px) {
+  @media screen and (min-width: 1400px) {
     height: 60vh;
   }
 `;
@@ -24,13 +24,12 @@ export const FlexContainer = styled.div`
   margin: auto;
   @media screen and (min-width: 1400px) {
     flex-direction: row;
-
     justify-content: center;
     position: absolute;
 
     width: 70%;
     height: 50%;
-    right: 2rem;
+    right: 5px;
     top: 2rem;
   }
 `;

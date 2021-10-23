@@ -1,7 +1,7 @@
 ///imports
 import React from "react";
-import { ThemeProvider } from "styled-components";
-import { css } from "styled-components";
+import { ThemeProvider, css, keyframes } from "styled-components";
+
 /// mixins
 
 export const spanBorders = css`
@@ -38,6 +38,35 @@ export const buttons = css`
     opacity: 0.9;
     border: solid 1px;
     border-color: ${({ theme }) => theme.prymary};
+  }
+`;
+export const Silde = keyframes`
+ 
+    0% {
+      top: 5%;
+      left: 20%;
+    }
+    100% {
+      top: 5%;
+      left: 45%;
+    }
+  }
+`;
+export const slideDown = keyframes`
+ 
+    0% {
+      top: 5%;
+      left: -2rem;
+      opacity: 0; padding: 10px;
+     
+    }
+    100% {
+      left: -2rem;
+      top: 140%;
+      width: 100%;
+      height: 15rem;
+      padding: 10px;
+    }
   }
 `;
 ///
