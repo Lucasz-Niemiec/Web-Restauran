@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { spanBorders } from "../../themePropvider";
 
 export const Wrapper = styled.div`
-  width: 100vw;
+  width: 100%;
   height: auto;
   min-height: 100%;
   background: ${({ theme }) => theme.secondary_1};

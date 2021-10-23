@@ -1,7 +1,7 @@
 //Uses
 import { useState } from "react";
 //styled
-import { Wrapper, Slide, StyledLink } from "./CardsStyles";
+import { Wrapper, Slide, StyledLink, CArdConatiner } from "./CardsStyles";
 //router
 
 //
@@ -16,27 +16,29 @@ const Cards = ({ id, img, title, description }) => {
 
   return (
     <>
-      <StyledLink
-        to={id}
-        onFocus={() => ClassChangeHandler()}
-        onBlur={() => mouseOutHandler()}
-      >
-        <Wrapper
-          onMouseEnter={() => ClassChangeHandler()}
-          onMouseLeave={() => mouseOutHandler()}
+      <CArdConatiner>
+        <StyledLink
+          to={id}
+          onFocus={() => ClassChangeHandler()}
+          onBlur={() => mouseOutHandler()}
         >
-          <h1>{title}</h1>
-
-          <img src={img} alt={title} />
-        </Wrapper>
-      </StyledLink>
-      {isMouseOver && (
-        <Slide>
-          <span className="slide">
-            <article className="text-slide">{description}</article>
-          </span>
-        </Slide>
-      )}
+          <Wrapper
+            onMouseEnter={() => ClassChangeHandler()}
+            onMouseLeave={() => mouseOutHandler()}
+          >
+            <h1>{title}</h1>
+            <img src={img} alt={title} />
+          </Wrapper>
+          <Slide className="slide"></Slide>
+          {/*  {isMouseOver && (
+            <Slide>
+              <span className="slide">
+                <article className="text-slide">{description}</article>
+              </span>
+            </Slide>
+          )} */}{" "}
+        </StyledLink>
+      </CArdConatiner>
     </>
   );
 };

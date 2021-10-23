@@ -1,3 +1,5 @@
+///uses
+import { useState } from "react";
 //Global styles
 import { GlobalStyle } from "./GlobalStyle";
 import Theme from "./themePropvider";
@@ -9,13 +11,20 @@ import Home from "./components/Home/Home";
 import Menu from "./components/Menu/Menu";
 import FoodInfo from "./components/FoodInfo/FoodInfo";
 import NavbarMenu from "./components/NavbarMenu/NavbarMenu";
-
+import Modal from "./components/Modal/Modal";
 //
 function App() {
+  const [reservation, setReservations] = useState(false);
+
+  const handleModal = () => {
+    setReservations(!reservation);
+  };
+
   return (
     <Theme>
       <Router>
-        <NavbarMenu />
+        <NavbarMenu openReservtion={handleModal} />
+        {reservation && <Modal openReservtion={handleModal} />}
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />

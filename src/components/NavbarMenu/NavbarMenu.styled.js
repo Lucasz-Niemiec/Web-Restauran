@@ -1,5 +1,6 @@
 import styled from "styled-components";
-
+import { buttons } from "../../themePropvider";
+///
 export const Button = styled.button`
   width: 2rem;
   height: 2rem;
@@ -11,7 +12,7 @@ export const Button = styled.button`
   flex-direction: column;
   align-items: center;
   margin-top: 5px;
-  z-index: 3;
+  z-index: 1;
   animation-name: goBackButton;
   animation-duration: 0.3s;
   animation-fill-mode: both;
@@ -72,17 +73,47 @@ export const Button = styled.button`
       border: transparent;
     }
   }
+  @media screen and (min-width: 900px) {
+    visibility: hidden;
+  }
 `;
 
 export const Wrapper = styled.div`
-  width: 90vw;
-  height: 95vh;
-  background: ${({ theme }) => theme.secondary_1};
+  opacity: 0;
   position: fixed;
-  margin: 20px;
-  z-index: 2;
 
-  animation: openNav 0.7s linear both;
+  @media screen and (min-width: 900px) {
+    opacity: 1;
+    background: black;
+    transition: ${({ theme }) => theme.ease_in_out};
+    width: 100%;
+    height: 5rem;
+    margin: auto;
+    z-index: 2;
+  }
+  @media screen and (min-width: 1500px) {
+    height: 10rem;
+  }
+  &.open {
+    opacity: 1;
+    background: ${({ theme }) => theme.secondary_1};
+    width: 95vw;
+    height: 95vh;
+    margin: 20px;
+    z-index: 2;
+
+    @media screen and (min-width: 900px) {
+      opacity: 1;
+      background: black;
+      transition: ${({ theme }) => theme.ease_in_out};
+      width: 100vw;
+      height: 5rem;
+      margin: auto;
+    }
+    @media screen and (min-width: 1500px) {
+      height: 10rem;
+    }
+  }
 
   @keyframes openNav {
     0% {
@@ -97,7 +128,7 @@ export const Wrapper = styled.div`
     }
 
     100% {
-      width: 90vw;
+      width: 90%;
       height: 95vh;
       overflow: hidden;
     }
@@ -107,19 +138,55 @@ export const Wrapper = styled.div`
 export const Nav = styled.nav`
   width: 90%;
   height: 90%;
-
-  padding: 1rem;
   margin: auto;
+  padding: 1rem;
   margin-top: 20px;
   border: solid 2px;
-  border-color: ${({ theme }) => theme.prymary}; ;
+  border-color: ${({ theme }) => theme.prymary};
+  @media screen and (min-width: 900px) {
+    margin: auto;
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
 `;
 export const NavContainer = styled.ul`
   width: 100%;
   height: 100%;
-  background-color: red;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media screen and (min-width: 900px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  @media screen and (min-width: 1500px) {
+    li {
+      width: 10rem;
+      height: 100%;
+    }
+  }
+`;
+
+export const ButtonReservation = styled.button`
+  ${buttons}
+  width: 100%;
+  font-weight: 900;
+  :hover {
+    border: none;
+    transform: scale(1);
+    background-color: ${({ theme }) => theme.prymary_varition};
+  }
+  @media screen and (min-width: 900px) {
+    margin: auto;
+  }
+  @media screen and (min-width: 900px) {
+    width: 10rem;
+    margin: 0%;
+    font-size: 1rem;
+    height: 100%;
+  }
 `;

@@ -32,4 +32,9 @@ export const LinkScroll = styled(HashLink)`
   :focus {
     background-color: ${({ theme }) => theme.prymary_varition};
   }
+  @media screen and (min-width: 1500px) {
+    font-size: 1rem;
+    width: 100%;
+    height: 100%;
+  }
 `;

@@ -4,7 +4,7 @@ import plate2 from "../../images/carissa-gan-RwoKbjJdYvE-unsplash.jpg";
 ///
 export const Wrapper = styled.div`
   background: ${({ theme }) => theme.prymary};
-  width: 100vw;
+  width: 100%;
   height: auto;
   min-height: 100%;
   padding: 1rem;
@@ -46,30 +46,6 @@ export const StyleLink = styled(Link)`
     opacity: 0.9;
   }
 `;
-
-// export const Button = styled.button`
-//   height: 3rem;
-//   width: 30%;
-//   margin: 2rem 0;
-//   font-size: 2rem;
-//   background: ${({ theme }) => theme.secondary_1};
-//   color: ${({ theme }) => theme.prymary};
-//   transition: ${({ theme }) => theme.ease_in_out};
-//   border: transparent;
-//   cursor: pointer;
-
-//   :hover {
-//     height: 3.2rem;
-//     outline: none;
-//     opacity: 0.9;
-//   }
-
-//   :focus {
-//     height: 3.2rem;
-//     outline: none;
-//     opacity: 0.9;
-//   }
-// `;
 
 export const BeforeImage = styled.div`
   width: 100%;

@@ -6,7 +6,7 @@ export const Button = styled.button`
   height: 50px;
   margin-bottom: 10rem;
   position: fixed;
-  right: 90%;
+  right: 85%;
   top: 86%;
   opacity: ${({ scrollButton }) => (scrollButton ? 0.9 : 0)};
   box-shadow: -2px 5px;
@@ -31,6 +31,12 @@ export const Button = styled.button`
     height: 2rem;
     transform: rotate(-45deg);
     margin-top: 1rem;
+  }
+  @media screen and (max-width: 400px) {
+    right: 80%;
+  }
+  @media screen and (min-width: 1000px) {
+    right: 95%;
   }
 `;
 

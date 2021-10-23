@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.footer`
   background: ${({ theme }) => theme.secondary_2};
-  width: 100vw;
+  width: 100%;
   height: auto;
   height: 100%;
   padding: 1rem;

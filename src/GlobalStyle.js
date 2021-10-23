@@ -20,6 +20,7 @@ body{
    
     font-family: 'Open Sans', sans-serif;
     
+    h1{font-size:${({ theme }) => theme.font_large};}
 }
 
 
