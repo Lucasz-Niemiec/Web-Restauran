@@ -8,17 +8,34 @@ export const Wrapper = styled.div`
   height: auto;
   min-height: 100%;
   padding: 1rem;
+
+  @media screen and (min-width: 1000px) {
+    height: 90vh;
+  }
+  @media screen and (min-width: 1600px) {
+    height: 60vh;
+  }
 `;
 
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media screen and (min-width: 1500px) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 5rem;
+  }
 `;
 
 export const Text = styled.p`
-  margin-top: 3rem;
   font-size: 1.5rem;
+  margin: 0%.5rem;
+  @media screen and (min-width: 1500px) {
+    width: 40%;
+    margin-right: 4rem;
+  }
 `;
 
 export const StyleLink = styled(Link)`
@@ -47,9 +64,21 @@ export const StyleLink = styled(Link)`
   }
 `;
 
+export const ImageConatiner = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 1500px) {
+    width: 40%;
+    margin-left: 4rem;
+  }
+`;
+
 export const BeforeImage = styled.div`
   width: 100%;
-  min-height: 25rem;
+  height: 25rem;
   margin: 0 0 3rem 0;
   background: url(${plate2}) center top no-repeat;
   position: relative;
@@ -66,6 +95,9 @@ export const BeforeImage = styled.div`
   :focus {
     height: 26rem;
     outline: none;
+  }
+  @media screen and (min-width: 1500px) {
+    width: 70%;
   }
 `;
 export const ButtonImage = styled(Link)`

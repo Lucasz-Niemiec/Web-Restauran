@@ -66,6 +66,7 @@ export const slideDown = keyframes`
       width: 100%;
       height: 15rem;
       padding: 10px;
+      z-index:2;
     }
   }
 `;

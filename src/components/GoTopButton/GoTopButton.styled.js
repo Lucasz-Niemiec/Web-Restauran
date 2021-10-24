@@ -4,7 +4,7 @@ import { HashLink } from "react-router-hash-link";
 export const Button = styled.button`
   width: 50px;
   height: 50px;
-  margin-bottom: 10rem;
+
   position: fixed;
   right: 85%;
   top: 86%;
@@ -37,6 +37,7 @@ export const Button = styled.button`
   }
   @media screen and (min-width: 1000px) {
     right: 95%;
+    top: 45rem;
   }
 `;
 

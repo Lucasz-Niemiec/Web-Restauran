@@ -18,6 +18,10 @@ export const Wrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: 1000px) {
+    padding: 0 5rem;
+  }
 `;
 export const CloseButton = styled.button`
   ${buttons}
@@ -52,8 +56,12 @@ export const CloseButton = styled.button`
 export const Content = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 100%;
   width: 100%;
+  @media screen and (min-width: 1000px) {
+    width: 50%;
+  }
 `;
 export const Form = styled.form`
   display: flex;
@@ -81,6 +89,12 @@ export const Form = styled.form`
       outline: none;
       border: solid 4px;
       border-color: ${({ theme }) => theme.prymary};
+    }
+    @media screen and (min-width: 1000px) {
+      width: 50%;
+      label {
+        width: 50%;
+      }
     }
   }
 `;

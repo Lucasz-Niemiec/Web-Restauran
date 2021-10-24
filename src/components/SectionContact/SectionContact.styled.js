@@ -8,6 +8,9 @@ export const Wrapper = styled.div`
   background: ${({ theme }) => theme.secondary_1};
   color: ${({ theme }) => theme.fonts_color_ligth};
   padding: 1rem;
+  @media screen and (min-width: 1000px) {
+    height: 80%;
+  }
 `;
 export const Content = styled.div`
   display: flex;
@@ -22,6 +25,18 @@ export const Content = styled.div`
     height: 1rem;
     width: 50%;
     ${spanBorders}
+  }
+  @media screen and (min-width: 1000px) {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 1rem;
+    height: 100%;
+    font-size: ${({ theme }) => theme.font_medium};
+    span {
+      transform: rotate(90deg);
+      width: 30%;
+    }
   }
 `;
 export const TextInfo = styled.div`
@@ -49,4 +64,8 @@ export const Img = styled.img`
   height: 10rem;
   width: auto;
   margin: 0.5rem 0;
+  @media screen and (min-width: 1000px) {
+    height: 15rem;
+    width: auto;
+  }
 `;

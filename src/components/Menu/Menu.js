@@ -5,6 +5,7 @@ import { myContext } from "../Context/context";
 import { Wrapper, Content } from "./Menu.styles";
 //compnents
 import GotoTop from "../GoToTop";
+import BreadCrumb from "../BreadCrumb/BreadCrumb";
 //
 
 const Menu = () => {
@@ -12,6 +13,7 @@ const Menu = () => {
 
   return (
     <Wrapper>
+      <BreadCrumb />
       <Content>{dataMapping.mapMenu} </Content>
       <GotoTop />
     </Wrapper>

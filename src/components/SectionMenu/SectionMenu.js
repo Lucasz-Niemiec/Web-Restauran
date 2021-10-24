@@ -10,6 +10,7 @@ import {
   ButtonImage,
   BeforeImage,
   StyleLink,
+  ImageConatiner,
 } from "./SectionMenu.styled";
 ///
 
@@ -24,10 +25,12 @@ const SectionMenu = () => {
           impedit necessitatibus tempore doloribus tempora quo neque nulla
           incidunt beatae, voluptate, temporibus sed cum!
         </Text>
-        <StyleLink to="/Menu">Menu</StyleLink>
-        <BeforeImage>
-          <ButtonImage to="/Menu"></ButtonImage>
-        </BeforeImage>
+        <ImageConatiner>
+          <StyleLink to="/Menu">Menu</StyleLink>
+          <BeforeImage>
+            <ButtonImage to="/Menu"></ButtonImage>
+          </BeforeImage>
+        </ImageConatiner>
       </Content>
     </Wrapper>
   );

@@ -92,7 +92,7 @@ export const Wrapper = styled.div`
     z-index: 2;
   }
   @media screen and (min-width: 1500px) {
-    height: 10rem;
+    height: 5rem;
   }
   &.open {
     opacity: 1;
@@ -111,7 +111,7 @@ export const Wrapper = styled.div`
       margin: auto;
     }
     @media screen and (min-width: 1500px) {
-      height: 10rem;
+      height: 5rem;
     }
   }
 
