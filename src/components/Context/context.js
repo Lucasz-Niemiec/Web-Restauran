@@ -5,6 +5,8 @@ export const myContext = createContext();
 
 export const AppContext = ({ children }) => {
   const [categories, setCategories] = useState([]);
+  const [fetchError, setFetchError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   const fetchCategoriesData = useCallback(() => {
     const getData = async (errMsg = null) => {
@@ -16,7 +18,9 @@ export const AppContext = ({ children }) => {
         if (!response.ok) throw Error("something went wrong");
         setCategories(data.categories);
       } catch (err) {
-        errMsg = err.message;
+        setFetchError(err.message);
+      } finally {
+        setIsLoading(false);
       }
     };
     getData();
@@ -51,7 +55,13 @@ export const AppContext = ({ children }) => {
 
   return (
     <myContext.Provider
-      value={{ fetchCategoriesData, dataMapping, categories }}
+      value={{
+        fetchCategoriesData,
+        dataMapping,
+        categories,
+        fetchError,
+        isLoading,
+      }}
     >
       {children}
     </myContext.Provider>

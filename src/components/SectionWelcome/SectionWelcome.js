@@ -8,7 +8,7 @@ import InfoCard from "../InfoCard/InfoCard";
 
 //
 function SectionWelcome() {
-  const { dataMapping } = useContext(myContext);
+  const { dataMapping, fetchError, isLoading } = useContext(myContext);
 
   return (
     <Wrapper id="SectionWelcome">
