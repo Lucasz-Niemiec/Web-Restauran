@@ -150,5 +150,9 @@ export const Slide = styled.div`
       font-size: 0.6rem;
       padding: 10px 10px 10px 2rem;
     }
+    @media screen and (max-width: 390px) {
+      background: transparent;
+      color: transparent;
+    }
   }
 `;

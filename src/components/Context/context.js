@@ -7,12 +7,17 @@ export const AppContext = ({ children }) => {
   const [categories, setCategories] = useState([]);
 
   const fetchCategoriesData = useCallback(() => {
-    const getData = async () => {
-      const response = await fetch(
-        `https://www.themealdb.com/api/json/v1/1/categories.php`
-      );
-      const data = await response.json();
-      setCategories(data.categories);
+    const getData = async (errMsg = null) => {
+      try {
+        const response = await fetch(
+          `https://www.themealdb.com/api/json/v1/1/categories.php`
+        );
+        const data = await response.json();
+        if (!response.ok) throw Error("something went wrong");
+        setCategories(data.categories);
+      } catch (err) {
+        errMsg = err.message;
+      }
     };
     getData();
   }, []);
