@@ -1,9 +1,12 @@
 //styles
 import { Wrapper } from "./InfoCard.styled";
+import { useFetchCategories } from "../../customHooks/useFetchCategories";
 function InfoCard() {
+  const { categories } = useFetchCategories();
   return (
     <Wrapper>
-      <h1>Info Restaurant</h1>
+      <h1>adsaadsasdasdasas</h1>
+      {console.log(categories)}
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem enim
         aperiam ea. Sequi rerum odio sunt, quos tenetur repellendus cumque iusto

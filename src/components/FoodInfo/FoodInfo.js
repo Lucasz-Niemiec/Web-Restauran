@@ -3,13 +3,14 @@ import BreadCrumb from "../BreadCrumb/BreadCrumb";
 import GoToTop from "../GoToTop";
 //uses
 import { useParams } from "react-router-dom";
-import { myContext } from "../Context/context";
+
+import { useFetchCategories } from "../../customHooks/useFetchCategories";
 //styles
 import { Wrapper, Content } from "./FoodInfo.styled";
-import { useContext } from "react";
+
 //
 const FoodInfo = () => {
-  const { categories } = useContext(myContext);
+  const { categories } = useFetchCategories();
 
   const { id } = useParams();
 

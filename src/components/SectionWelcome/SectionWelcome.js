@@ -8,12 +8,15 @@ import InfoCard from "../InfoCard/InfoCard";
 
 //
 function SectionWelcome() {
-  const { dataMapping, fetchError, isLoading } = useContext(myContext);
+  const { dataMapping, loadingHandling } = useContext(myContext);
 
   return (
     <Wrapper id="SectionWelcome">
       <InfoCard />
-      <FlexContainer>{dataMapping.mapSectionOne}</FlexContainer>
+
+      <FlexContainer>
+        {dataMapping.mapSectionOne} {loadingHandling.loading}
+      </FlexContainer>
     </Wrapper>
   );
 }

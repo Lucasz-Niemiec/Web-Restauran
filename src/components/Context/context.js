@@ -1,34 +1,11 @@
-import React, { createContext, useState, useCallback, useEffect } from "react";
+import { useFetchCategories } from "../../customHooks/useFetchCategories";
+import React, { createContext } from "react";
 
 import Cards from "../Cards/Cards";
 export const myContext = createContext();
 
 export const AppContext = ({ children }) => {
-  const [categories, setCategories] = useState([]);
-  const [fetchError, setFetchError] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-
-  const fetchCategoriesData = useCallback(() => {
-    const getData = async (errMsg = null) => {
-      try {
-        const response = await fetch(
-          `https://www.themealdb.com/api/json/v1/1/categories.php`
-        );
-        const data = await response.json();
-        if (!response.ok) throw Error("something went wrong");
-        setCategories(data.categories);
-      } catch (err) {
-        setFetchError(err.message);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    getData();
-  }, []);
-
-  useEffect(() => {
-    fetchCategoriesData();
-  }, [fetchCategoriesData]);
+  const { categories, fetchError, isLoading } = useFetchCategories();
 
   const dataMapping = {
     mapMenu: categories.map((category) => (
@@ -53,14 +30,14 @@ export const AppContext = ({ children }) => {
       )),
   };
 
+  const loadingHandling = { loading: isLoading && <p>is loading..</p> };
+
   return (
     <myContext.Provider
       value={{
-        fetchCategoriesData,
         dataMapping,
+        loadingHandling,
         categories,
-        fetchError,
-        isLoading,
       }}
     >
       {children}
