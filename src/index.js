@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { AppContext } from "./components/Context/context";
+import { AppContext } from "./Context/context";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 

@@ -1,6 +1,6 @@
 //uses
 import { useContext } from "react";
-import { myContext } from "../Context/context";
+import { myContext } from "../../Context/context";
 //styles
 import { Wrapper, Content } from "./Menu.styles";
 //compnents
@@ -9,12 +9,15 @@ import BreadCrumb from "../BreadCrumb/BreadCrumb";
 //
 
 const Menu = () => {
-  const { dataMapping } = useContext(myContext);
+  const { dataMapping, loadingHandler, errorHandler } = useContext(myContext);
 
   return (
     <Wrapper>
       <BreadCrumb />
-      <Content>{dataMapping.mapMenu} </Content>
+      <Content>
+        {dataMapping.mapMenu} {loadingHandler.loading}
+        {errorHandler.catchError}
+      </Content>
       <GotoTop />
     </Wrapper>
   );

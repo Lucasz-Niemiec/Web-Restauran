@@ -30,7 +30,7 @@ const Cards = ({ id, img, title, description }) => {
           >
             <h1>{title}</h1>
             <img src={img} alt={title} />
-          </Wrapper>{" "}
+          </Wrapper>
         </StyledLink>
         {isMouseOver && (
           <Slide className="slide">

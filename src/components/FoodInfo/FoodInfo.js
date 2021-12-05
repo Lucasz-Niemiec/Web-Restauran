@@ -3,13 +3,15 @@ import BreadCrumb from "../BreadCrumb/BreadCrumb";
 import GoToTop from "../GoToTop";
 //uses
 import { useParams } from "react-router-dom";
-
+import { useContext } from "react";
+import { myContext } from "../../Context/context";
 import { useFetchCategories } from "../../customHooks/useFetchCategories";
 //styles
 import { Wrapper, Content } from "./FoodInfo.styled";
 
 //
 const FoodInfo = () => {
+  const { loadingHandler, errorHandler } = useContext(myContext);
   const { categories } = useFetchCategories();
 
   const { id } = useParams();
@@ -35,6 +37,8 @@ const FoodInfo = () => {
             <p>{mappedArray["0"].strCategoryDescription}</p>
           </Content>
         ))}
+        {loadingHandler.loading}
+        {errorHandler.catchError}
       </Wrapper>
       <GoToTop />
     </>

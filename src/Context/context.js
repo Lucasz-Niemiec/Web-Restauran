@@ -1,7 +1,7 @@
-import { useFetchCategories } from "../../customHooks/useFetchCategories";
-import React, { createContext } from "react";
+import { useFetchCategories } from "../customHooks/useFetchCategories";
+import { createContext } from "react";
 
-import Cards from "../Cards/Cards";
+import Cards from "../components/Cards/Cards";
 export const myContext = createContext();
 
 export const AppContext = ({ children }) => {
@@ -30,14 +30,17 @@ export const AppContext = ({ children }) => {
       )),
   };
 
-  const loadingHandling = { loading: isLoading && <p>is loading..</p> };
+  const loadingHandler = { loading: isLoading && <p>is loading..</p> };
+
+  const errorHandler = { catchError: fetchError && <p>error</p> };
 
   return (
     <myContext.Provider
       value={{
         dataMapping,
-        loadingHandling,
+        loadingHandler,
         categories,
+        errorHandler,
       }}
     >
       {children}
