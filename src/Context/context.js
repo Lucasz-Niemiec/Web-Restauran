@@ -1,6 +1,7 @@
 import { useFetchCategories } from "../customHooks/useFetchCategories";
 import { createContext } from "react";
-
+import Loading from "../components/Loading/Loading";
+import Error from "../components/Error/Erorr";
 import Cards from "../components/Cards/Cards";
 export const myContext = createContext();
 
@@ -30,9 +31,9 @@ export const AppContext = ({ children }) => {
       )),
   };
 
-  const loadingHandler = { loading: isLoading && <p>is loading..</p> };
+  const loadingHandler = { loading: isLoading && <Loading /> };
 
-  const errorHandler = { catchError: fetchError && <p>error</p> };
+  const errorHandler = { catchError: fetchError && <Error /> };
 
   return (
     <myContext.Provider

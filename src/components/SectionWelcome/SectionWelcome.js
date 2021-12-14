@@ -5,6 +5,7 @@ import { myContext } from "../../Context/context";
 import { Wrapper, FlexContainer } from "./SectionWelcome.Styles";
 //components
 import InfoCard from "../InfoCard/InfoCard";
+import Loading from "../Loading/Loading";
 
 //
 function SectionWelcome() {

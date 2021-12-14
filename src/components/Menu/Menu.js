@@ -14,10 +14,8 @@ const Menu = () => {
   return (
     <Wrapper>
       <BreadCrumb />
-      <Content>
-        {dataMapping.mapMenu} {loadingHandler.loading}
-        {errorHandler.catchError}
-      </Content>
+      <Content>{dataMapping.mapMenu}</Content> {errorHandler.catchError}
+      {loadingHandler.loading}
       <GotoTop />
     </Wrapper>
   );
