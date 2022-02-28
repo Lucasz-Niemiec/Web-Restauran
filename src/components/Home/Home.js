@@ -9,6 +9,7 @@ import SectionMenu from "../SectionMenu/SectionMenu";
 import SectionConatct from "../SectionContact/SectionConatct";
 import Footer from "../Footer/Footer";
 import GoTopButton from "../GoTopButton/GoTopButton";
+import GoToTop from "../GoToTop";
 
 //
 function Home() {
@@ -23,7 +24,7 @@ function Home() {
       <SectionMenu />
 
       <SectionConatct />
-
+      <GoToTop />
       <Footer />
     </>
   );
