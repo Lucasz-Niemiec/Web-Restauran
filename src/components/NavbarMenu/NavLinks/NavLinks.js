@@ -10,7 +10,6 @@ const NavLinks = ({ path, title, open }) => {
   const goToLink = () => {
     navigate(`/${path}`, { replace: true });
   };
-  console.log(path);
   return (
     <Li onClick={open}>
       <LinkScroll smooth to={path} onClick={() => goToLink()}>

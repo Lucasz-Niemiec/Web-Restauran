@@ -25,9 +25,8 @@ export const useFetchCategories = () => {
         setIsLoading(false);
       }
     };
-    setTimeout(() => {
-      getData();
-    }, 3000);
-  }, []);
+
+    getData();
+  }, [API_URL]);
   return { categories, fetchError, isLoading };
 };
